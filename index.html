@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's RSVP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hi BUBU ❤️</h1>
+        <p>You are invited to a special Valentine's Day date!</p>
+        <p>Please RSVP below:</p>
+        <form id="rsvp-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="response">Will you join me?</label>
+            <select id="response" name="response" required>
+                <option value="">-- Select an option --</option>
+                <option value="yes">Yes, I can't wait! 💕</option>
+                <option value="no">Sorry, I can't. 😢</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+        <p id="thank-you-message" class="hidden">Thank you for your response! ❤️</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
