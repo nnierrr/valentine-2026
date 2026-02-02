@@ -7,25 +7,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="decision-screen">
         <h1>Hi BUBU ❤️</h1>
-        <p>You are invited to a special Valentine's Day date!</p>
-        <p>Please RSVP below:</p>
-        <form id="rsvp-form">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
-            <label for="response">Will you join me?</label>
-            <select id="response" name="response" required>
-                <option value="">-- Select an option --</option>
-                <option value="yes">Yes, I can't wait! 💕</option>
-                <option value="no">Sorry, I can't. 😢</option>
-            </select>
-
-            <button type="submit">Submit</button>
-        </form>
-        <p id="thank-you-message" class="hidden">Thank you for your response! ❤️</p>
+        <p>Will you join me for Valentine's Day?</p>
+        <button class="decision-button" id="yes-button">Yes</button>
+        <button class="decision-button" id="no-button">No</button>
     </div>
+
+    <div class="container hidden" id="yes-screen">
+        <h1>Yay! 🎉</h1>
+        <p>I can't wait to see you! ❤️</p>
+        <canvas id="fireworks"></canvas>
+        <div id="confetti"></div>
+    </div>
+
+    <div class="container hidden" id="no-screen">
+        <p>Are you sure that you will not join me for Valentine's Day?</p>
+        <button class="decision-button" id="no-button">Yes</button>
+        <button class="decision-button" id="yes-button">No, I want to GO with DUDU!</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

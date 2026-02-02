@@ -1,25 +1,44 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffe6e6;
-    color: #333;
+    background-color: #fce5cd; /* Light cream color */
+    color: #5c3b00; /* Brown color matching the image */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-image: url('pompompurin-and-macaron-macaron-and-pompompurin.gif');
+    background-size: cover;
+    background-position: center;
 }
-
+    
 .container {
     text-align: center;
-    background: #fff;
+    background: rgba(255, 245, 230, 0.9); /* Creamy semi-transparent background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 h1 {
-    color: #ff3366;
+    color: #5c3b00; /* Brown color */
 }
 
 form {
@@ -42,14 +61,46 @@ input, select, button {
 }
 
 button {
-    background-color: #ff3366;
-    color: white;
+    background-color: #f9cb9c; /* Light orange color */
+    color: #5c3b00; /* Brown color */
     border: none;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 button:hover {
-    background-color: #e62e5c;
+    background-color: #f6b26b; /* Slightly darker orange */
+    transform: scale(1.1);
+}
+
+.decision-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#yes-button {
+    background-color: #f9cb9c;
+    color: #5c3b00;
+}
+
+#yes-button:hover {
+    background-color: #f6b26b;
+    transform: scale(1.1);
+}
+
+#no-button {
+    background-color: #fce5cd;
+    color: #5c3b00;
+}
+
+#no-button:hover {
+    background-color: #f9cb9c;
+    transform: scale(1.1);
 }
 
 .hidden {
@@ -60,4 +111,23 @@ button:hover {
     margin-top: 20px;
     font-size: 18px;
     color: #ff3366;
+}
+
+#fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
 }
